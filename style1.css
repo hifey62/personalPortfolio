@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-y: auto; 
+     overflow: scroll;
+    
+     background-color: whitesmoke;
+}
+
+.link-container {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    height: 100vh;
+    width: 100%; /* Adjust as needed */
+    background-color: grey;
+    transition: left 0.5s ease; /* Smooth sliding */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+#sidebar-active {
+    display: none;
+}
+
+#sidebar-active:checked ~ .link-container {
+    left: 0; /* Slide in */
+}
+
+#sidebar-active:checked ~ .open-sidebar-btn {
+    display: none;
+}
+
+.open-sidebar-btn
+ {
+    cursor: pointer;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    z-index: 1001;
+
+}
+
+.close-sidebar-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    z-index: 1001;
+}
+
+.head-con {
+    background-image: url(transife.png);
+    background-size: cover;
+    position: relative;
+    height: 50vh;
+    font-size: 18px;
+}
+
+.body-con {
+    padding: 20px;
+}
+
+.nav-ul {
+    list-style: none;
+   
+    padding: 20px;
+    color: white;
+    position: relative;
+    top: 30px;
+    
+}
+
+.nav-ul li {
+    margin: 10px 0;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    cursor: pointer;
+    
+}
+
+.nav-ul li a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.my-info-overlay{
+    width: 400px;
+    position: relative;
+    top: 25px;
+    left: 2px;
+}
+
+.inf-f{
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.inf-name{
+    margin-bottom: 5px;
+}
+.inf-niche{
+    margin-bottom: 30px;
+    font-weight: bolder;
+    font-size: 30;
+}
+.inf-f-adress{
+    margin-bottom:5px;
+}
+
+label{
+    margin-right: 20px;
+}
+
+.icon1{
+    width: 30px;
+}
+.pro-img{
+    display: none;
+}
+
+.cv-btn{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background: rgb(95, 88, 88);
+    color: black;
+    border-radius: 25px;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.services-con{
+    width: 300px;
+    margin-bottom: 50px;
+    margin: auto;
+
+}
+
+.webdev-con{
+    margin-top: 30px;
+    width: 300px;
+    border-radius: 8px;
+    padding: 3px;
+    
+    border: 1px solid rgb(189, 185, 185);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+.webdev-con h3{
+    margin-left: 70px;
+    margin-top: 05px;
+    margin-bottom: 05px;
+}
+
+.webdev-svg{
+    position: relative;
+    right: 280px;
+}
+
+.resum-h{
+    margin-left: 0;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .head-con {
+        background-image: url(transife2.png);
+        background-size: cover;
+        height: 70vh;
+    }
+
+    .link-container {
+        position: fixed; /* Static positioning for laptops */
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0px 0px 5px 5px;
+
+        display: flex; /* Display flex to show navigation by default */
+        justify-content: center; /* Center the nav content horizontally */
+        background: grey; /* Remove the darkblue background for laptops */
+        height: auto; /* Adjust height */
+        z-index: 1000;
+        align-items: center;
+
+        
+    }
+
+    .nav-ul {
+        display: flex;
+        position: relative;
+        right: 160px;
+        top: -01px;
+    }
+
+    .open-sidebar-btn,
+    .close-sidebar-btn {
+        display: none; /* Hide toggle buttons on laptops */
+    }
+
+    .nav-ul li {
+        font-size: 18px; /* Adjust font size for laptops */
+        margin: 0 20px;
+    }
+
+    .my-info-overlay{
+        width: 900px;
+        position: relative;
+        top: 140px;
+        left: 600px;
+    }
+
+    .pro-img{
+        display: block;
+       
+
+    }
+
+    .pro-img img{
+        height: 300px;
+        width: 300px;
+        position: relative;
+        bottom: 250px;
+        right: 360px;
+
+    }
+
+    .inf-f{
+        display: flex;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    .inf-name{
+        margin-bottom: 5px;
+    }
+    .inf-niche{
+        margin-bottom: 10px;
+        font-weight: bolder;
+        font-size: 30;
+    }
+    .about-p1{
+        width: 830px;
+        margin-left: 220px;
+        margin-top: 30px;
+    }
+    .about-hi{
+        margin-top: 30px;
+        margin-left: 220px;
+    }
+
+    .cv-btn{
+        width: 100px;
+        height: 30px;
+        border: none;
+        background: rgb(95, 88, 88);
+        color: black;
+        border-radius: 25px;
+        margin: 10px;
+        cursor: pointer;
+        margin-top: 30px;
+        margin-left: 218px;
+    }
+
+    .services{
+        margin-top: 40px;
+        margin-left: 220px;
+        width: 400px;
+    }
+
+    .services-con{
+        width: 300px;
+        display: flex;
+        gap: 480px;
+    }
+
+
+    .webdev-con {
+        padding: 10px;
+    }
+
+    .webdev-con p {
+        width: 300px;
+    }
+
+    .webdev-con2{
+        position: relative;
+        right: 420px;
+    }
+
+    .webdev-con3{
+        position: relative;
+        right: 830px;
+    }
+
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      
+      .resume-container {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        gap: 20%;
+        position: relative;
+        left: 35px;
+        
+      }
+
+      .resum-h{
+        margin-left: 130px;
+      }
+      
+      .resume-h2 {
+        font-size: 0.5rem;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      
+      .section-emp {
+        margin-bottom: 40px;
+      }
+      
+      .timeline {
+        position: relative;
+        padding-left: 20px;
+        border-left: 2px solid #ddd;
+      }
+      
+      .timeline-item {
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 20px;
+      }
+      
+      .timeline-item .circle {
+        position: absolute;
+        top: 0;
+        left: -10px;
+        width: 10px;
+        height: 10px;
+        background-color: #333;
+        border-radius: 50%;
+      }
+      
+      .content h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+      
+      .content p {
+        margin: 5px 0;
+        font-size: 0.9rem;
+        color: #555;
+      }
+
+      .resume{
+        margin-top: 200px;
+        margin-left: 80px;
+      }
+      
+
+
+}
